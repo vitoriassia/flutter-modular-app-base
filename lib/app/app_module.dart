@@ -11,6 +11,7 @@ class AppModule extends Module {
   final List<ModularRoute> routes = [
     ChildRoute('/', child: (context, args) => SplashPage()),
     ModuleRoute('/auth', module: AuthModule()),
-    ModuleRoute('/product', module: ProductModule())
+    ModuleRoute('/product',
+        module: ProductModule(), transition: TransitionType.rightToLeft)
   ];
 }
