@@ -1,3 +1,4 @@
+import 'package:app_modular/app/modules/product/model/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -13,7 +14,8 @@ class ProductPage extends StatelessWidget {
         child: ElevatedButton(
           child: Text("Listar Produtos"),
           onPressed: () {
-            Modular.to.pushNamed("./list");
+            Modular.to
+                .pushNamed("./list", arguments: ProductModel('1', "Vitor"));
           },
         ),
       ),

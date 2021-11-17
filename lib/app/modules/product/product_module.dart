@@ -9,6 +9,6 @@ class ProductModule extends Module {
   @override
   final List<ModularRoute> routes = [
     ChildRoute('/', child: (context, args) => ProductPage()),
-    ChildRoute('/list', child: (context, args) => ListProductPage())
+    ChildRoute('/list', child: (context, args) => ListProductPage(args.data))
   ];
 }
