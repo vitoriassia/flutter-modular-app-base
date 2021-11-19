@@ -13,7 +13,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     emit(LoginLoading());
     await Future.delayed(const Duration(seconds: 1));
     try {
-      loginRepository.login(event.email, event.password);
+      await loginRepository.login(event.email, event.password);
       emit(LoginSuccess());
     } catch (e) {
       emit(LoginFailure("Credenciais Invalidas"));

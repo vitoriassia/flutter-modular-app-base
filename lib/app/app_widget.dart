@@ -10,7 +10,7 @@ class _AppWidgetState extends State<AppWidget> {
   @override
   void initState() {
     Future.delayed(Duration(seconds: 2))
-        .then((value) => Modular.to.navigate('/product/red'));
+        .then((value) => Modular.to.navigate('/auth/'));
     super.initState();
   }
 

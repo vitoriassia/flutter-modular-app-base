@@ -3,7 +3,7 @@ class LoginRepository {
     if (email == '1' && password == '1') {
       return true;
     } else {
-      throw Exception("Credenciais Invalidas");
+      throw Exception('Credenciais Invalidas');
     }
   }
 }
