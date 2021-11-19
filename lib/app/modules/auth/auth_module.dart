@@ -7,7 +7,7 @@ class AuthModule extends Module {
   @override
   final List<Bind> binds = [
     Bind.factory((i) => LoginRepository()),
-    Bind.singleton((i) => LoginBloc(i.get<LoginRepository>()))
+    Bind.singleton((i) => LoginBloc(i.get<LoginRepository>(), i()))
   ];
 
   @override

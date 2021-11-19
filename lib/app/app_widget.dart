@@ -8,13 +8,6 @@ class AppWidget extends StatefulWidget {
 
 class _AppWidgetState extends State<AppWidget> {
   @override
-  void initState() {
-    Future.delayed(Duration(seconds: 2))
-        .then((value) => Modular.to.navigate('/auth/'));
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
