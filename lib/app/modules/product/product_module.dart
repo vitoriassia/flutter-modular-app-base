@@ -9,7 +9,11 @@ class ProductModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-    ChildRoute('/', child: (context, args) => ProductPage()),
+    ChildRoute('/', child: (context, args) => ProductPage(), children: [
+      ChildRoute('/red', child: (_, __) => Container(color: Colors.red)),
+      ChildRoute('/blue', child: (_, __) => Container(color: Colors.blue)),
+      ChildRoute('/green', child: (_, __) => Container(color: Colors.green))
+    ]),
     ChildRoute('/list',
         child: (context, args) => ListProductPage(args.data),
         customTransition: myCustomTransition)

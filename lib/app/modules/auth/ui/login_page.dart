@@ -9,7 +9,7 @@ class LoginPage extends StatelessWidget {
         child: ElevatedButton(
           child: Text("Login"),
           onPressed: () {
-            Modular.to.navigate("/product/");
+            Modular.to.navigate("/product/red");
           },
         ),
       ),
